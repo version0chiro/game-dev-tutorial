@@ -10,9 +10,12 @@ int main()
     int b = 10;
     int c = 2;
 
-    int x = a + b + c;
+    a = 10;
 
-    int y = a*b*c;
+    const int x = a + b + c;
+
+    const int y = a*b*c;
+
 
     std::cout << x<<" "<<y;
 
