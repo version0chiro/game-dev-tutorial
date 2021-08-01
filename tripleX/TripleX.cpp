@@ -1,13 +1,17 @@
 #include <iostream>
 
-int main()
+void PrintIntroduct()
 {
     // print the welcome message to the terminal
     std::cout << "You are a secret agent breaking into a secure server room...";
     std::cout << std::endl;
     std::cout << "Enter the correct code to continue...";
     std::cout << std::endl;
+}
 
+void PlayGame()
+{
+    PrintIntroduct();
     // declare tthe 3 number code
     int CodeA = 4;
     int CodeB = 10;
@@ -22,17 +26,24 @@ int main()
     std::cout << " The code multiplCodeProduct upto " << CodeProduct << std::endl;
 
     int PlayerGuessA, PlayerGuessB, PlayerGuessC;
-    std::cin>>PlayerGuessA>>PlayerGuessB>>PlayerGuessC;
+    std::cin >> PlayerGuessA >> PlayerGuessB >> PlayerGuessC;
 
     int GuessSum = PlayerGuessA + PlayerGuessB + PlayerGuessC;
     int GuessProduct = PlayerGuessA * PlayerGuessB * PlayerGuessC;
 
-    if (GuessSum == CodeSum && GuessProduct == CodeProduct){
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
+    {
         std::cout << "You are a true agent!";
-    }else{
+    }
+    else
+    {
         std::cout << "You are a false agent!";
     }
     // std::cout << "Player Guess: " << PlayerGuessA << " " << PlayerGuessB << " " << PlayerGuessC << std::endl;
+}
 
+int main()
+{
+    PlayGame();
     return 0;
 }
